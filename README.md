@@ -1,6 +1,9 @@
 # Website
 
-The Screem Weddings Productions website (DL-033). **Status: proposed (preview only, not published).**
+The Screem Weddings Productions website (DL-033, DL-034). **Status: live on GitHub Pages with placeholder content.**
+
+- Live site: https://weddingsbyscreamstudios-cmd.github.io/screem-weddings-website/
+- Repository (public): https://github.com/weddingsbyscreamstudios-cmd/screem-weddings-website
 
 ## Files
 | File | What it is |
@@ -22,7 +25,7 @@ Anything shown in *green italic [brackets]* or "placeholder" is waiting for a de
 5. Domain and Netlify account (D-20)
 6. Remove the green "Preview" banner at the top of `index.html`
 
-Publishing to Netlify is an external action and needs the owner's explicit approval.
+Every push to GitHub updates the live site within a minute.
 
 ## Previewing
 In Claude Code, ask Claude to "open the website preview". The preview server runs only on this Mac.
