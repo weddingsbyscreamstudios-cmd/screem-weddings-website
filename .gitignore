@@ -1,0 +1,24 @@
+# Mac system files
+.DS_Store
+._*
+
+# Never upload camera originals, project files or large masters to the public repository
+*.mov
+*.MOV
+*.mxf
+*.MXF
+*.braw
+*.r3d
+*.R3D
+*.prproj
+*.psd
+*.psb
+*.tif
+*.tiff
+*.cr2
+*.cr3
+*.nef
+*.arw
+*.dng
+*.wav
+*.zip
