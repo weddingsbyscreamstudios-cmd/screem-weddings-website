@@ -1,6 +1,6 @@
 # Image sources
 
-Where each website photo came from (DL-035). Source: the studio's own Instagram posts, downloaded by the owner to `~/Desktop/insta_img/screamweddings_posts/` (1080 px wide). The code is the Instagram post ID + slide number. Re-compressed (JPEG quality 78), not resized.
+Where each website photo came from (DL-035). Source: the studio's own Instagram posts, downloaded by the owner to `~/Desktop/insta_img/screamweddings_posts/` (1080 px wide). The code is the Instagram post ID + slide number. Used exactly as downloaded (no re-saving, so no extra quality loss); this is the highest quality these Instagram copies allow.
 
 | Website file | Instagram post / slide |
 |---|---|
