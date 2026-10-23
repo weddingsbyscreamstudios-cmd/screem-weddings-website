@@ -7,6 +7,7 @@
 @font-face { font-family: "Inter"; src: url("assets/fonts/Inter.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
 
 :root {
+  --error: #b3261e;
   --bg: #ffffff;
   --bg-2: #f4f7f2;          /* very light sage wash for alternate sections */
   --bg-3: #e9f0e6;
@@ -266,3 +267,9 @@ textarea { resize: vertical; }
 .gallery-grid.expanded figure.more { display: block; }
 .gallery-more { text-align: center; margin: 40px 0 0; }
 .req { color: var(--green-deep); }
+
+/* Form errors: empty required fields turn red */
+.field.has-error label, .field.has-error .req { color: var(--error); }
+.field.has-error input, .field.has-error textarea { border-bottom: 2px solid var(--error); }
+.field-error { color: var(--error); font-size: .82rem; margin: 6px 0 0; }
+.form-status.is-error { color: var(--error); }

@@ -38,10 +38,34 @@ const WEB3FORMS_KEY = "bfb4cceb-c966-47dc-b862-97f36f0e961c";
 const form = document.querySelector(".contact-form");
 const status = form.querySelector(".form-status");
 const submitBtn = form.querySelector('button[type="submit"]');
+// Mark an empty required field in red with a short message under it
+const setFieldError = (el, on) => {
+  const field = el.closest(".field");
+  field.classList.toggle("has-error", on);
+  el.setAttribute("aria-invalid", String(on));
+  let msg = field.querySelector(".field-error");
+  if (on && !msg) {
+    msg = document.createElement("p");
+    msg.className = "field-error";
+    msg.id = el.id + "-error";
+    msg.textContent = "Please enter " + field.querySelector("label").firstChild.textContent.trim().toLowerCase();
+    field.appendChild(msg);
+    el.setAttribute("aria-describedby", msg.id);
+  }
+  if (!on && msg) { msg.remove(); el.removeAttribute("aria-describedby"); }
+};
+form.querySelectorAll("[required]").forEach((el) => {
+  const clear = () => { if (el.value.trim()) setFieldError(el, false); };
+  el.addEventListener("input", clear);
+  el.addEventListener("change", clear);
+});
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const missing = [...form.querySelectorAll("[required]")].find((el) => !el.value.trim());
-  if (missing) { status.textContent = "Please fill in all fields marked *: your names, wedding date, venue / city and email or phone."; missing.focus(); return; }
+  const missing = [...form.querySelectorAll("[required]")].filter((el) => !el.value.trim());
+  form.querySelectorAll("[required]").forEach((el) => setFieldError(el, missing.includes(el)));
+  status.classList.toggle("is-error", missing.length > 0);
+  if (missing.length) { status.textContent = "Please fill in the fields marked in red."; missing[0].focus(); return; }
 
   const data = new FormData(form);
   data.append("access_key", WEB3FORMS_KEY);
