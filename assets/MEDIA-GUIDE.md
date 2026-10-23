@@ -11,7 +11,7 @@
 | Folder | What goes in it | Size to export |
 |---|---|---|
 | `images/hero/` | 1 main photo for the top of the home page | 2400 px wide, JPG or WebP, under 500 KB |
-| `images/films/` | 1 cover still per film card | 1600 × 900 px (16:9), under 300 KB each |
+| `images/stories/` | 1 cover photo per story card | 4:5 portrait, 1080 × 1350 px or larger, under 400 KB each |
 | `images/about/` | Photo of you / the team | 1200 × 1500 px (4:5), under 300 KB |
 | `images/gallery/` | Extra photos | 1600 px on the long side, under 300 KB each |
 | `videos/hero/` | Short silent background loop (showreel) | 10–20 s, 1920 × 1080, MP4 (H.264), no sound, under 10 MB |

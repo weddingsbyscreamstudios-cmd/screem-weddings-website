@@ -8,13 +8,14 @@
   <meta property="og:title" content="Screem Weddings Productions">
   <meta property="og:description" content="Cinematic wedding films, photography, albums and reels.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero/hero-01.jpg">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/CormorantGaramond.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="preview-banner" role="note">Preview: placeholder text and images, not yet public</div>
+  <div class="preview-banner" role="note">Preview: some text is still placeholder</div>
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -29,7 +30,8 @@
         <span class="bar bar-1"></span><span class="bar bar-2"></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#films">Films</a></li>
+        <li><a href="#films">Stories</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#packages">Packages</a></li>
         <li><a href="#about">About</a></li>
@@ -40,18 +42,17 @@
   </header>
 
   <main id="main">
-    <!-- HERO: the showreel video goes here once a cleared film is chosen -->
+    <!-- HERO: a showreel video can replace this photo later -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-media" aria-hidden="true">
-        <div class="frame-placeholder hero-frame"></div>
-        <div class="grain"></div>
+        <img class="hero-frame" src="assets/images/hero/hero-01.jpg" alt="" fetchpriority="high">
       </div>
       <div class="hero-content">
         <p class="eyebrow reveal">Wedding films · Photography · Albums</p>
         <h1 id="hero-title" class="reveal">Your wedding,<br><em>the way it felt.</em></h1>
         <p class="lead reveal">We film and photograph weddings so that, years from now, you can hear the vows, see the laughter and feel the day again.</p>
         <div class="hero-actions reveal">
-          <a class="btn" href="#films">Watch our films</a>
+          <a class="btn" href="#films">See our stories</a>
           <a class="btn btn-ghost" href="#contact">Check your date</a>
         </div>
       </div>
@@ -64,32 +65,54 @@
       </div>
     </section>
 
-    <!-- FILMS: each card is a placeholder until a couple's consent and music licence are recorded -->
+    <!-- STORIES: photos from the studio's own Instagram posts (DL-035) -->
     <section class="films" id="films" aria-labelledby="films-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">Selected films</p>
+          <p class="eyebrow">Selected stories</p>
           <h2 id="films-title">Stories we've told</h2>
         </header>
         <div class="film-grid">
           <article class="film-card reveal">
-            <div class="frame-placeholder" style="--hue: 105"><span class="play" aria-hidden="true"></span></div>
-            <div class="film-meta"><h3>Couple name &amp; couple name</h3><p>Highlight film · Venue, city</p></div>
+            <div class="photo"><img src="assets/images/stories/story-01.jpg" alt="Couple in yellow at a haldi ceremony, surrounded by family" loading="lazy" width="1080" height="1349"></div>
+            <div class="film-meta"><h3>Haldi in yellow</h3><p>Wedding · Haldi ceremony</p></div>
           </article>
           <article class="film-card reveal">
-            <div class="frame-placeholder" style="--hue: 105"><span class="play" aria-hidden="true"></span></div>
-            <div class="film-meta"><h3>Couple name &amp; couple name</h3><p>Teaser · Venue, city</p></div>
+            <div class="photo"><img src="assets/images/stories/story-02.jpg" alt="Couple posing against a bright blue wall in Jodhpur" loading="lazy" width="1080" height="1349"></div>
+            <div class="film-meta"><h3>The blue city</h3><p>Pre-wedding · Jodhpur</p></div>
           </article>
           <article class="film-card reveal">
-            <div class="frame-placeholder" style="--hue: 105"><span class="play" aria-hidden="true"></span></div>
-            <div class="film-meta"><h3>Couple name &amp; couple name</h3><p>Wedding film · Venue, city</p></div>
+            <div class="photo"><img src="assets/images/stories/story-03.jpg" alt="Couple walking on a white sand beach in Thailand" loading="lazy" width="1080" height="1349"></div>
+            <div class="film-meta"><h3>By the sea</h3><p>Pre-wedding · Thailand</p></div>
           </article>
           <article class="film-card reveal">
-            <div class="frame-placeholder" style="--hue: 105"><span class="play" aria-hidden="true"></span></div>
-            <div class="film-meta"><h3>Couple name &amp; couple name</h3><p>Reel · Venue, city</p></div>
+            <div class="photo"><img src="assets/images/stories/story-04.jpg" alt="Couple in ivory outfits in warm evening light" loading="lazy" width="1080" height="1349"></div>
+            <div class="film-meta"><h3>A quiet promise</h3><p>Engagement</p></div>
           </article>
         </div>
-        <p class="note">Placeholder frames. Real films appear here only after the couple agrees and the music is cleared.</p>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2 id="gallery-title">Moments</h2>
+        </header>
+        <div class="gallery-grid">
+          <figure class="reveal"><img src="assets/images/gallery/gallery-01.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-02.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-03.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-04.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-05.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-06.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-07.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-08.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-09.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-10.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-11.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+          <figure class="reveal"><img src="assets/images/gallery/gallery-12.jpg" alt="Wedding photograph by Screem Weddings Productions" loading="lazy"></figure>
+        </div>
       </div>
     </section>
 
@@ -172,7 +195,7 @@
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
-        <div class="frame-placeholder about-frame reveal" style="--hue: 105"></div>
+        <div class="photo about-frame reveal"><img src="assets/images/about/about-01.jpg" alt="Bride in a white and gold saree" loading="lazy"></div>
         <div class="about-text reveal">
           <p class="eyebrow">About us</p>
           <h2 id="about-title">We're storytellers first</h2>
@@ -231,7 +254,7 @@
       </div>
       <nav aria-label="Footer">
         <ul>
-          <li><a href="#films">Films</a></li>
+          <li><a href="#films">Stories</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#packages">Packages</a></li>
           <li><a href="#faq">FAQ</a></li>
