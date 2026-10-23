@@ -106,3 +106,11 @@ if (galleryGrid && moreBtn) {
     if (!open) document.getElementById("gallery").scrollIntoView();
   });
 }
+
+// Logo: go back to the top of the home page
+document.querySelector(".brand").addEventListener("click", (e) => {
+  e.preventDefault();
+  setMenu(false);
+  history.replaceState(null, "", location.pathname);
+  window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+});
