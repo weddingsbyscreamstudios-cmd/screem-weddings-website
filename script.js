@@ -41,7 +41,7 @@ const submitBtn = form.querySelector('button[type="submit"]');
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const missing = [...form.querySelectorAll("[required]")].find((el) => !el.value.trim());
-  if (missing) { status.textContent = "Please fill in your names and a way to contact you."; missing.focus(); return; }
+  if (missing) { status.textContent = "Please fill in all fields marked *: your names, wedding date, venue / city and email or phone."; missing.focus(); return; }
 
   const data = new FormData(form);
   data.append("access_key", WEB3FORMS_KEY);

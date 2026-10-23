@@ -265,3 +265,4 @@ textarea { resize: vertical; }
 .gallery-grid figure.more { display: none; }
 .gallery-grid.expanded figure.more { display: block; }
 .gallery-more { text-align: center; margin: 40px 0 0; }
+.req { color: var(--green-deep); }

@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/CormorantGaramond.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <div class="preview-banner" role="note">Preview: some text is still placeholder</div>
@@ -292,12 +292,12 @@
           <p class="placeholder-text">[Phone / WhatsApp / email / Instagram to be added]</p>
         </div>
         <form class="contact-form reveal" name="enquiry" novalidate>
-          <div class="field"><label for="f-name">Your names</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-name">Your names <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
           <div class="field-row">
-            <div class="field"><label for="f-date">Wedding date</label><input id="f-date" name="date" type="date"></div>
-            <div class="field"><label for="f-venue">Venue / city</label><input id="f-venue" name="venue" type="text"></div>
+            <div class="field"><label for="f-date">Wedding date <span class="req" aria-hidden="true">*</span></label><input id="f-date" name="date" type="date" required></div>
+            <div class="field"><label for="f-venue">Venue / city <span class="req" aria-hidden="true">*</span></label><input id="f-venue" name="venue" type="text" required></div>
           </div>
-          <div class="field"><label for="f-email">Email or phone</label><input id="f-email" name="contact" type="text" required></div>
+          <div class="field"><label for="f-email">Email or phone <span class="req" aria-hidden="true">*</span></label><input id="f-email" name="contact" type="text" required></div>
           <div class="field"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
           <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="btn" type="submit">Send enquiry</button>
@@ -327,6 +327,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
