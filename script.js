@@ -44,3 +44,15 @@ form.addEventListener("submit", (e) => {
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Gallery "Show more photos" toggle
+const galleryGrid = document.querySelector(".gallery-grid");
+const moreBtn = document.querySelector(".gallery-more button");
+if (galleryGrid && moreBtn) {
+  moreBtn.addEventListener("click", () => {
+    const open = galleryGrid.classList.toggle("expanded");
+    moreBtn.setAttribute("aria-expanded", String(open));
+    moreBtn.textContent = open ? "Show fewer photos" : "Show more photos";
+    if (!open) document.getElementById("gallery").scrollIntoView();
+  });
+}

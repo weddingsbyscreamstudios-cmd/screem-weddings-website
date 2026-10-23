@@ -260,3 +260,8 @@ textarea { resize: vertical; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* Gallery: first 12 photos show, the rest after "Show more photos" */
+.gallery-grid figure.more { display: none; }
+.gallery-grid.expanded figure.more { display: block; }
+.gallery-more { text-align: center; margin: 40px 0 0; }
