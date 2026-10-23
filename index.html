@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/CormorantGaramond.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <div class="preview-banner" role="note">Preview: some text is still placeholder</div>
@@ -299,7 +299,9 @@
           </div>
           <div class="field"><label for="f-email">Email or phone</label><input id="f-email" name="contact" type="text" required></div>
           <div class="field"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="btn" type="submit">Send enquiry</button>
+          <p class="small form-privacy">We use these details only to reply to your enquiry.</p>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -325,6 +327,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

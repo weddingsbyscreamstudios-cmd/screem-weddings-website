@@ -32,15 +32,41 @@ if ("IntersectionObserver" in window) {
   document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
 }
 
-// Enquiry form: not connected yet (where enquiries go is an open decision)
+// Enquiry form: sent by email through Web3Forms (DL-037).
+// The access key is public by design: it only lets this form email the studio.
+const WEB3FORMS_KEY = "bfb4cceb-c966-47dc-b862-97f36f0e961c";
 const form = document.querySelector(".contact-form");
 const status = form.querySelector(".form-status");
-form.addEventListener("submit", (e) => {
+const submitBtn = form.querySelector('button[type="submit"]');
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const missing = [...form.querySelectorAll("[required]")].find((el) => !el.value.trim());
   if (missing) { status.textContent = "Please fill in your names and a way to contact you."; missing.focus(); return; }
-  status.textContent = "Thank you! (Preview: this form is not connected yet, so nothing was sent.)";
-  form.reset();
+
+  const data = new FormData(form);
+  data.append("access_key", WEB3FORMS_KEY);
+  data.append("subject", "New wedding enquiry from the website");
+  data.append("from_name", "Screem Weddings website");
+
+  const label = submitBtn.textContent;
+  submitBtn.textContent = "Sending…";
+  submitBtn.disabled = true;
+  status.textContent = "";
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+    const json = await res.json().catch(() => ({}));
+    if (res.ok && json.success !== false) {
+      status.textContent = "Thank you! Your enquiry has been sent. We'll get back to you soon.";
+      form.reset();
+    } else {
+      status.textContent = "Sorry, it didn't send. Please try again in a moment.";
+    }
+  } catch {
+    status.textContent = "Sorry, it didn't send. Please check your connection and try again.";
+  } finally {
+    submitBtn.textContent = label;
+    submitBtn.disabled = false;
+  }
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
